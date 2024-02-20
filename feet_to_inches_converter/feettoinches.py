@@ -14,10 +14,13 @@ output_label = sg.Text("", key="output")
 
 exit_button = sg.Button("Exit")
 
+col1 = sg.Column([[feet_label], [inches_label]])
+col2 = sg.Column([[feet_input], [inches_input]])
+
+
 window = sg.Window(
     "Converter", layout = [
-        [feet_label, feet_input], 
-        [inches_label, inches_input], 
+        [col1, col2],  
         [convert_button, exit_button, output_label],
         ]
 )
